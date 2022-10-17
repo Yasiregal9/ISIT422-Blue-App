@@ -1,0 +1,22 @@
+<h1>Plant Registration</h1>
+<form #plantinfo = "ngForm" (ngSubmit) = "onClickSubmit(plantinfo.value)" >
+        <label for="name">Name</label><br/>
+        <input type = "text" name = "name" placeholder = "Enter Plant Name" ngModel>
+    <pre></pre>
+        <label for="species">Species</label><br/>
+        <input type = "text" name = "species" placeholder = "Enter Plant Species" ngModel>
+    <pre></pre>
+        <label for="commonname">Common Name</label><br/>
+        <input type = "text" name = "commonname" placeholder = "Enter Plant Common Name" ngModel>
+    <pre></pre>
+        <label for="startheight">Starting Height (inches)</label><br/>
+        <input type = "text" name = "startheight" placeholder = "Enter Starting Height" ngModel>
+    <pre></pre>
+        <label for="startwidth">Starting Width (inches)</label><br/>
+        <input type = "text" name = "startwidth" placeholder = "Enter Starting Width" ngModel>
+    <pre></pre>
+        <label for="source">Source</label><br/>
+        <input type = "text" name = "source" placeholder = "Enter Source of Acquisition" ngModel>
+    <pre></pre>
+        <input type = "submit" value = "Submit Plant">
+</form>
