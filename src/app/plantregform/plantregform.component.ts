@@ -30,4 +30,20 @@ export class PlantregformComponent implements OnInit {
     
   }
 
+  showRandomName() {
+
+    const arr = ['Sweetie', 'Dumpling', 'Button', 'Noodle', 'Majesty', 'Bugsy', 'Bug Eater', 'Amy', 'Blossom', 'Bud', 'Chloe', 'Emerald', 'Minnie', 'Pearl', 'Sage',
+      'Verde', 'Sylvia', 'Goldie', 'Groot', 'Vincent Van Grow'];
+
+    const random = arr[Math.floor(Math.random() * arr.length)];
+
+
+
+    let input = (document.getElementById("plantName") as HTMLInputElement).value = random;
+
+
+  }
+
+
+
 }
