@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+h1 {
+    color: rgb(55, 124, 55);
+    font-family: Cambria, Georgia, serif;
+    font-size: 200%;
+    padding: 5px 15px;
+    background: #eee;
+}
+
+h2,
+h3 {
+    color: #444;
+    font-family: Cambria, Georgia, serif;
+    font-weight: lighter;
+}
+
+body {
+    margin: 2em;
+}
+
+body,
+input[type="text"] {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+}
+
+label {
+    color: #000000;
+}
+
+input[type=text] {
+    font-size: 1em;
+    padding: .5rem;
+    font-style: italic;
+}
+
+input[type=submit] {
+    padding: 5px 15px;
+    background: #eee;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: Cambria, Georgia, serif;
+    color: #333;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(68, 144, 68);
+    color: white;
+}

@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantregformComponent } from './plantregform/plantregform.component';
+import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlantregformComponent
+    PlantregformComponent,
+    PlantupdateformComponent
   ],
   imports: [
     BrowserModule,
