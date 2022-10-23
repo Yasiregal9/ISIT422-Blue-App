@@ -1,0 +1,19 @@
+<h1>Update Plant 🪴</h1>
+<form #plantinfo = "ngForm" (ngSubmit) = "onClickSubmit(plantinfo.value)" >
+        <label for="date">Date</label><br/>
+        <input type = "text" name = "date" placeholder = "Enter Date" ngModel>
+    <pre></pre>
+        <label for="currentheight">Current Height (inches)</label><br/>
+        <input type = "text" name = "currentheight" placeholder = "Enter Current Height" ngModel>
+    <pre></pre>
+        <label for="currentwidth">Current Width (inches)</label><br/>
+        <input type = "text" name = "currentwidth" placeholder = "Enter Current Width" ngModel>
+    <pre></pre>
+        <label for="health">Health</label><br/>
+        <input type = "text" name = "health" placeholder = "Enter 1-10" ngModel>
+    <pre></pre>
+        <label for="comment">Comment</label><br/>
+        <input type = "text" name = "comment" placeholder = "Enter Comment" ngModel>
+    <pre></pre>
+        <input type = "submit" value = "Update Plant">
+</form>

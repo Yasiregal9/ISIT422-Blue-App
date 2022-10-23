@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ISIT422-Blue-App"
+    }
+  },
+  "defaultProject": "ISIT422-Blue-App",
+  "cli": {
+    "analytics": false
+  }
 }
