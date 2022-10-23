@@ -1,6 +1,6 @@
 export class UserPlant {
     plantID: string;
-    //plantUserID: string;
+    plantUserID: string;
     plantUserName: string;
     plantLatinName: string;
     plantCommonName: string;

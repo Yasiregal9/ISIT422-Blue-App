@@ -12,7 +12,7 @@ export class PlantregformComponent implements OnInit {
   plant: string[] = [];
   newPlant: UserPlant;
 
-  constructor() { }
+  constructor(private userPlantService: UserPlantService) { }
 
   onClickSubmit(data) {
     this.newPlant = new UserPlant();
@@ -24,6 +24,11 @@ export class PlantregformComponent implements OnInit {
     this.newPlant.plantStartWidth = data.startwidth;
     this.newPlant.plantCurrentWidth = data.startwidth;
     this.newPlant.plantSource = data.source;
+
+    //hard code user ID. Replace with google user ID later.
+    this.newPlant.plantUserID = 'testUser';
+
+    this.userPlantService.addNewUserPlant(this.newPlant).subscribe();
  }
 
   ngOnInit(): void {
@@ -39,7 +44,8 @@ export class PlantregformComponent implements OnInit {
 
 
 
-    let input = (document.getElementById("plantName") as HTMLInputElement).value = random;
+    //let input = (document.getElementById("plantName") as HTMLInputElement).value = random;
+    (document.getElementById("plantName") as HTMLInputElement).innerText = random;
 
 
   }
