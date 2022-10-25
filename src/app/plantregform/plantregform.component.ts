@@ -45,7 +45,7 @@ export class PlantregformComponent implements OnInit {
 
 
     //let input = (document.getElementById("plantName") as HTMLInputElement).value = random;
-    (document.getElementById("plantName") as HTMLInputElement).innerText = random;
+    (document.getElementById("plantName") as HTMLInputElement).value = random;
 
 
   }
