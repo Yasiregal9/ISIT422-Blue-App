@@ -8,10 +8,9 @@ h1 {
 
 h2,
 h3 {
-    background: #eee;
-    color: #444;
     font-style: italic;
     font-family: Cambria, Georgia, serif;
+    font-weight: lighter;
 }
 
 body {
@@ -26,6 +25,7 @@ input[type="text"] {
 
 label {
     color: #000000;
+    size: 50px;
 }
 
 input[type=text] {
@@ -34,7 +34,7 @@ input[type=text] {
     font-style: italic;
 }
 
-input[type=submit] {
+button {
     padding: 5px 15px;
     background: #eee;
     border: 0 none;
@@ -44,7 +44,7 @@ input[type=submit] {
     color: #333;
 }
 
-input[type=submit]:hover {
+button:hover {
     background-color: rgb(68, 144, 68);
     color: white;
 }

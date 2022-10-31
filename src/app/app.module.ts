@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
+import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     PlantregformComponent,
     PlantupdateformComponent,
+    LoginComponent
     DashboardComponent
   ],
   imports: [

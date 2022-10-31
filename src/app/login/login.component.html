@@ -1,0 +1,30 @@
+<div *ngIf="!display">
+    <h1>Login</h1>
+    <div>
+        <h3>Create Account</h3>
+        <form> <label for="new-user">User Name</label><br>
+            <input type="text" id="new-user" placeholder="Enter User Name" #userName />
+            <pre></pre>
+            <label for="new-pw">Password</label><br>
+            <input type="text" id="new-pw" placeholder="Enter Password" #pw />
+            <pre></pre>
+            <button (click)="CreateAccount(userName.value, pw.value)">Create Account</button>
+            <pre></pre>
+            
+        <h3>Login</h3>
+        <form> <label for="newExUser">User Name</label><br>
+            <input type="text" id="newExUser" placeholder="Enter User Name" #newExUser />
+            <pre></pre>
+            <label for="newExpw">Password</label><br>
+            <input type="text" id="newExpw" placeholder="Enter Password" #newExpw />
+            <pre></pre>
+            <label for="id">User ID</label><br>
+            <input [(ngModel)]="existingUser._id" />
+            <pre></pre>
+            <button (click)="login(newExUser.value, newExpw.value)">Log In</button>
+            </form>
+
+            <div *ngIf="display">
+                <h2>You are logged in </h2>
+                <button (click)="logout()">Log Out</button>
+            </div>
