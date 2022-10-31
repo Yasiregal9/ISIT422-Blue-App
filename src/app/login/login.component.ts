@@ -27,9 +27,8 @@ export class LoginComponent implements OnInit {
 
     sessionStorage.setItem('ID:', this.existingUser._id );
     sessionStorage.setItem('Name:', this.existingUser.userName);
-    //window.location.href = '/dashboard';
 
-    //return
+  
    })
   }
 
@@ -48,8 +47,7 @@ export class LoginComponent implements OnInit {
  
         this.display = true;
         console.log("in login " + this.display);
-        //window.location.href = '/dashboard';
-        //return  // not sure this is needed, but a multi line subscribe method normally needs one
+
        });
   }
 
@@ -58,7 +56,7 @@ export class LoginComponent implements OnInit {
     sessionStorage.setItem('Name:', "");
     this.display = false;
     console.log("in logout " + this.display);
-    //window.location.href = '/dashboard';
+  
   }
 
   constructor(private userService: UserService) {
