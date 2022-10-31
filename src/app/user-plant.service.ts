@@ -20,9 +20,12 @@ export class UserPlantService {
    return(this.http.post<UserPlant>(this.userPlantUrl, plant, this.httpOptions));
   }
 
-  getTest(): Observable<UserPlant[]> {
+  //Once user sign-in is implemented, pass userid to server and only get user plants
+  getUserPlants(): Observable<UserPlant[]> {
     return this.http.get<UserPlant[]>(this.userPlantUrl);
   }
+
+
 
 
 
