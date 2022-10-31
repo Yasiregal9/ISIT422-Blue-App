@@ -14,7 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     PlantregformComponent,
     PlantupdateformComponent,
-    LoginComponent
+    LoginComponent,
     DashboardComponent
   ],
   imports: [
