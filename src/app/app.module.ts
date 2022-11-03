@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlantregformComponent,
-    PlantupdateformComponent
+    PlantupdateformComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

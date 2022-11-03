@@ -16,7 +16,7 @@ export class PlantregformComponent implements OnInit {
 
   onClickSubmit(data) {
     this.newPlant = new UserPlant();
-    this.newPlant.plantUserName = data.name;
+    this.newPlant.plantUserName = (document.getElementById("plantName") as HTMLInputElement).value;
     this.newPlant.plantLatinName = data.species;
     this.newPlant.plantCommonName = data.commonname;
     this.newPlant.plantStartHeight = data.startheight;
