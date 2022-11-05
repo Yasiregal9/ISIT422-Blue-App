@@ -14,7 +14,10 @@ export class PlantupdateformComponent implements OnInit {
     constructor(private updatePlantService: UpdatePlantService) { }
   
     onClickSubmit(data) {
+      console.log(data.plantID); //deleteme
       this.updatePlant = new UpdatePlant();
+      this.updatePlant.plantID = data.plantID;
+      console.log("plantID from form: "+this.updatePlant.plantID) //deleteme
       this.updatePlant.updateDate = data.date;
       this.updatePlant.updateCurrentHeight = +data.currentheight;
       this.updatePlant.updateCurrentWidth = +data.currentwidth;

@@ -16,10 +16,8 @@ export class UpdatePlantService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   UpdatePlant(plant: UpdatePlant): Observable<UpdatePlant> {
-    console.log("service received ");
-    console.log(plant.updateCurrentHeight);
-    console.log(plant.updateCurrentWidth);
-   return(this.http.post<UpdatePlant>(this.updatePlantUrl, plant, this.httpOptions));
+    console.log("plantID from service: "+ plant.plantID) //deleteme
+    return(this.http.post<UpdatePlant>(this.updatePlantUrl, plant, this.httpOptions));
   }
 
   getTest(): Observable<UpdatePlant[]> {
