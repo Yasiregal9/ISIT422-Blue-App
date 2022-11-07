@@ -1,7 +1,9 @@
+<div *ngIf="userId">
 <p>Your Plants</p>
 <div class="userplants-list">
     <a *ngFor="let plant of userPlants">
         {{plant.plantUserName}}
     </a>
 
+</div>
 </div>

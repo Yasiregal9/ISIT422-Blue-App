@@ -9,6 +9,7 @@ import { UserPlant } from '../userPlant';
 })
 export class DashboardComponent implements OnInit {
   userPlants: UserPlant[];
+  userId = sessionStorage.getItem('ID:');
 
   constructor(private userPlantService: UserPlantService) { }
 
@@ -17,7 +18,10 @@ export class DashboardComponent implements OnInit {
   }
 
   getUserPlants(): void {
-    this.userPlantService.getUserPlants().subscribe(result => this.userPlants = result);
+    this.userPlantService.getUserPlants().subscribe(result => {
+      let filteredResult = result.filter(c => c.plantUserID == this.userId);
+      this.userPlants = filteredResult;
+    });
   }
 
 }

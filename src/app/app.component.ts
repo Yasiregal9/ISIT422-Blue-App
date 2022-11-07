@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ISIT422-Blue-App';
+  userId = sessionStorage.getItem('ID:');
+
 }
