@@ -8,6 +8,7 @@ import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { UserPlantDetailsComponent } from './user-plant-details/user-plant-detai
     PlantupdateformComponent,
     LoginComponent,
     DashboardComponent,
+    PlantinfoComponent
     UserPlantDetailsComponent
   ],
   imports: [
