@@ -18,7 +18,7 @@ import { UserPlantDetailsComponent } from './user-plant-details/user-plant-detai
     PlantupdateformComponent,
     LoginComponent,
     DashboardComponent,
-    PlantinfoComponent
+    PlantinfoComponent,
     UserPlantDetailsComponent
   ],
   imports: [

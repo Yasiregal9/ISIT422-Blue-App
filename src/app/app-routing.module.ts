@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'plantregister', component: PlantregformComponent },
   { path: 'plantupdate', component: PlantupdateformComponent },
-  { path: 'plantinfo', component: PlantinfoComponent}
+  { path: 'plantinfo', component: PlantinfoComponent},
   { path: 'plantdetails/:id', component: UserPlantDetailsComponent }
 ];
 
