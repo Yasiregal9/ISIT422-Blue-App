@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'plantregister', component: PlantregformComponent },
-  { path: 'plantupdate', component: PlantupdateformComponent }
+  { path: 'plantupdate', component: PlantupdateformComponent },
+  { path: 'plantdetails/:id', component: UserPlantDetailsComponent }
 ];
 
 @NgModule({
