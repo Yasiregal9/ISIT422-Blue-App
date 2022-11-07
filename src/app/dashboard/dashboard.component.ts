@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   userPlants: UserPlant[];
   loggedIn: boolean = false;
   currentUser: string = 'Please Log In';
-  picVar: string = "";
+  picVar: string = "/assets/plants2.jpg";
 
   constructor(private userPlantService: UserPlantService) { }
 
