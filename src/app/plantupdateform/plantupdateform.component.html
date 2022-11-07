@@ -1,3 +1,4 @@
+<div *ngIf="userId">
 <h1>Update Plant 🪴</h1>
 <form #plantinfo = "ngForm" (ngSubmit) = "onClickSubmit(plantinfo.value)" >
         <label for="plantID">plantID</label><br/>
@@ -20,3 +21,4 @@
     <pre></pre>
         <input type = "submit" value = "Update Plant">
 </form>
+</div>

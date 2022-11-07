@@ -1,12 +1,20 @@
+
+<div *ngIf="userId">
+<p>Your Plants</p>
+
 <h4>{{currentUser}}</h4>
 <img src='{{picVar}}'>
 <h1>Your Plants</h1>
+
 <div class="userplants-list">
     <a *ngFor="let plant of userPlants">
         {{plant.plantUserName}}
     </a>
 
 </div>
+
+</div>
+
   
 <div *ngIf="loggedIn">
     <!-- <app-logout></app-logout> -->
@@ -16,4 +24,5 @@
     <!-- <signin></signin> -->
     </div>
   
+
 

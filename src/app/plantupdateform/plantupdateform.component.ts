@@ -10,6 +10,8 @@ export class PlantupdateformComponent implements OnInit {
 
     plant: string[] = [];
     updatePlant: UpdatePlant;
+    userId = sessionStorage.getItem('ID:');
+
   
     constructor(private updatePlantService: UpdatePlantService) { }
   
