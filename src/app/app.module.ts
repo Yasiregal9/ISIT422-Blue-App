@@ -8,6 +8,7 @@ import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PlantregformComponent,
     PlantupdateformComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PlantinfoComponent
   ],
   imports: [
     BrowserModule,
