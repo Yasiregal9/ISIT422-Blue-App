@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ISIT422-Blue-App';
+
   userId = sessionStorage.getItem('ID:');
+  title = 'PhyteClub';
 
 }
