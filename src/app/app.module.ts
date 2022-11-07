@@ -9,6 +9,7 @@ import { PlantupdateformComponent } from './plantupdateform/plantupdateform.comp
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantinfoComponent } from './plantinfo/plantinfo.component';
+import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PlantinfoComponent } from './plantinfo/plantinfo.component';
     LoginComponent,
     DashboardComponent,
     PlantinfoComponent
+    UserPlantDetailsComponent
   ],
   imports: [
     BrowserModule,
