@@ -11,12 +11,13 @@ export class PlantregformComponent implements OnInit {
 
   plant: string[] = [];
   newPlant: UserPlant;
+  userId = sessionStorage.getItem('ID:');
 
   constructor(private userPlantService: UserPlantService) { }
 
   onClickSubmit(data) {
     this.newPlant = new UserPlant();
-    this.newPlant.plantUserName = data.name;
+    this.newPlant.plantUserName = (document.getElementById("plantName") as HTMLInputElement).value;
     this.newPlant.plantLatinName = data.species;
     this.newPlant.plantCommonName = data.commonname;
     this.newPlant.plantStartHeight = data.startheight;
@@ -26,7 +27,7 @@ export class PlantregformComponent implements OnInit {
     this.newPlant.plantSource = data.source;
 
     //hard code user ID. Replace with google user ID later.
-    this.newPlant.plantUserID = 'testUser';
+    this.newPlant.plantUserID = this.userId;
 
     this.userPlantService.addNewUserPlant(this.newPlant).subscribe();
  }

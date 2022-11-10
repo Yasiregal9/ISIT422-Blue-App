@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantregformComponent } from './plantregform/plantregform.component';
 import { PlantupdateformComponent } from './plantupdateform/plantupdateform.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PlantinfoComponent } from './plantinfo/plantinfo.component';
+import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlantregformComponent,
-    PlantupdateformComponent
+    PlantupdateformComponent,
+    LoginComponent,
+    DashboardComponent,
+    PlantinfoComponent,
+    UserPlantDetailsComponent
   ],
   imports: [
     BrowserModule,

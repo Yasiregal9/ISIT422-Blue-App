@@ -1,2 +1,14 @@
-<app-plantregform></app-plantregform>
-<app-plantupdateform></app-plantupdateform>
+<h1>Welcome to {{title}}</h1>
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>&nbsp;
+    <a routerLink="/plantregister">Register New Plant</a>&nbsp;
+    <a routerLink="/plantupdate">Update Existing Plant</a>&nbsp;
+    <a routerLink="/plantdetails">See Your Plant Details</a>&nbsp;
+    <a routerLink="/plantinfo">View Plant Information</a>
+</nav>
+
+<img src="/assets/plants2.jpg">
+
+<router-outlet></router-outlet>
+<br><br>
+<app-login></app-login>
