@@ -3,6 +3,7 @@ import {UserPlant} from './userPlant'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { UpdatePlant } from './updatePlant';
 
 @Injectable({
   providedIn: 'root'
@@ -11,20 +12,29 @@ export class UserPlantService {
 
   constructor(private http: HttpClient) { }
 
-  private userPlantUrl: string = 'http://localhost:3000/userplant';
+  private userPlantsUrl: string = 'http://localhost:3000/userplant';
+  private oneUserPlantUrl: string = 'http://localhost:3000/oneuserplant';
+  private getUpdatesUrl: string = 'http://localhost:3000/getupdates';
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   addNewUserPlant(plant: UserPlant): Observable<UserPlant> {
     console.log("service received "+plant.plantUserName);
-   return(this.http.post<UserPlant>(this.userPlantUrl, plant, this.httpOptions));
+   return(this.http.post<UserPlant>(this.userPlantsUrl, plant, this.httpOptions));
   }
 
   //Once user sign-in is implemented, pass userid to server and only get user plants
   getUserPlants(): Observable<UserPlant[]> {
-    return this.http.get<UserPlant[]>(this.userPlantUrl);
+    return this.http.get<UserPlant[]>(this.userPlantsUrl);
   }
 
+  getOneUserPlant(plantID: String): Observable<UserPlant> {
+    return this.http.get<UserPlant>(this.oneUserPlantUrl+"/"+plantID);
+  }
 
+  getPlantUpdates(plantID: String): Observable<UpdatePlant[]> {
+    return this.http.get<UpdatePlant[]>(this.getUpdatesUrl+"/"+plantID);
+  }
 
 }

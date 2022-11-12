@@ -1,10 +1,26 @@
 <h1>Plant Details</h1>
 <div *ngIf="userPlant">
 
-    <h2>{{userPlant.plantUserName | uppercase}} Details</h2>
-    <div><span>id: </span>{{userPlant.plantID}}</div>
-    <div>
-        
-    </div>
+    <h2>{{userPlant.plantUserName}} Details</h2>
+    <div><span>Common Name: </span>{{userPlant.plantCommonName}}</div>
+    <div><span>Latin Name: </span>{{userPlant.plantLatinName}}</div>
+    <div><span>Obtained from </span>{{userPlant.plantSource}}</div>
+    <div><span>Height: </span>{{userPlant.plantCurrentHeight}}"</div>
+    <div><span>Width: </span>{{userPlant.plantCurrentWidth}}"</div>
+    <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
+
+
+    <h2>Update History</h2>
+
   
   </div>
+
+  <!-- plantLatinName: string;
+  plantCommonName: string;
+  plantSource: string;
+  plantStartHeight: number;
+  plantCurrentHeight: number;
+  plantStartWidth: number;
+  plantCurrentWidth: number;
+  plantStartHealth: number;
+  plantCurrentHealth: number; -->
