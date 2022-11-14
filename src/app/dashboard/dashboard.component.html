@@ -1,16 +1,15 @@
 
 <div *ngIf="userId">
-<h4>{{currentUser}}</h4>
-<img src='{{picVar}}'>
-<h1>Your Plants</h1>
+    <h4>{{currentUser}}</h4>
+    <img src='{{picVar}}'>
+    <h1>Your Plants</h1>
 
-<div class="userplants-list">
-    <a *ngFor="let plant of userPlants">
-        {{plant.plantUserName}}
-    </a>
+    <div class="userplants-list">
+        <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}}">
+            {{plant.plantUserName}}
+        </a>
 
-</div>
-
+    </div>
 </div>
 
   

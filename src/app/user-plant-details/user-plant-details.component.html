@@ -1,10 +1,27 @@
 <h1>Plant Details</h1>
 <div *ngIf="userPlant">
 
-    <h2>{{userPlant.plantUserName | uppercase}} Details</h2>
-    <div><span>id: </span>{{userPlant.plantID}}</div>
-    <div>
-        
+    <h2>{{userPlant.plantUserName}}</h2>
+    <div>{{userPlant.plantCommonName}}</div>
+    <div><i>{{userPlant.plantLatinName}}</i></div>
+    <div><span>Obtained from </span>{{userPlant.plantSource}}</div>
+    <div><span>Height: </span>{{userPlant.plantCurrentHeight}}"</div>
+    <div><span>Width: </span>{{userPlant.plantCurrentWidth}}"</div>
+    <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
+
+    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
+
+    <h2>Update History</h2>
+    <div class="updates-list">
+      <a *ngFor="let update of updateArray">
+          {{update.updateDate}}
+          <ul>
+            <li>Height: {{update.updateCurrentHeight}}"</li>
+            <li>Width: {{update.updateCurrentWidth}}"</li>
+            <li>Health: {{update.updateCurrentHealth}}/10</li>
+            <li *ngIf="update.updateComment">Comment: {{update.updateComment}}</li>
+          </ul>
+      </a>
     </div>
-  
+    
   </div>

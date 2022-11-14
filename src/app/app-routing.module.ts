@@ -9,7 +9,7 @@ import { UserPlantDetailsComponent } from './user-plant-details/user-plant-detai
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'plantregister', component: PlantregformComponent },
-  { path: 'plantupdate', component: PlantupdateformComponent },
+  { path: 'plantupdate/:id', component: PlantupdateformComponent },
   { path: 'plantinfo', component: PlantinfoComponent},
   { path: 'plantdetails/:id', component: UserPlantDetailsComponent }
 ];
