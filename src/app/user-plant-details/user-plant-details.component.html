@@ -9,6 +9,7 @@
     <div><span>Width: </span>{{userPlant.plantCurrentWidth}}"</div>
     <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
 
+    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
 
     <h2>Update History</h2>
     <div class="updates-list">
@@ -18,7 +19,7 @@
             <li>Height: {{update.updateCurrentHeight}}"</li>
             <li>Width: {{update.updateCurrentWidth}}"</li>
             <li>Health: {{update.updateCurrentHealth}}/10</li>
-            <li *ngIf="update.updateComment">Comment: {{update.updateCurrentHeight}}</li>
+            <li *ngIf="update.updateComment">Comment: {{update.updateComment}}</li>
           </ul>
       </a>
     </div>
