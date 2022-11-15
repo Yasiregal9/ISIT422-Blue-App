@@ -1,11 +1,11 @@
 <div *ngIf="!display">
   <h2>Please log in</h2>
-    <div id="buttonDiv"></div>
-  </div>
+<div class="center" id="buttonDiv"></div>
+</div>
   
 
 <div *ngIf="display">
     <h2>You are logged in</h2>
-    <button (click)="logout()">Log Out</button>
+    <button (click)="logout()" class="center-block">Log Out</button>
   </div>
 

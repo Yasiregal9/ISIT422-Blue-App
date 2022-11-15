@@ -1,12 +1,26 @@
 <h1>Welcome to {{title}}</h1>
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>&nbsp;
-    <a routerLink="/plantregister">Register New Plant</a>&nbsp;
-    <a routerLink="/plantinfo">View Plant Information</a>
-</nav>
 
-<img src="/assets/plants2.jpg">
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/plantregister">Register New Plant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/plantinfo">Search Plants</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<img src="/assets/plants2.jpg" class="center-block">
 
 <router-outlet></router-outlet>
+<br><br>
 <app-login></app-login>
 
