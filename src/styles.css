@@ -1,9 +1,13 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
 h1 {
     color: rgb(55, 124, 55);
-    font-family: Cambria, Georgia, serif;
-    font-size: 200%;
+    font-family: Fira sans, sans;
+    font-size: 225%;
     padding: 5px 15px;
     background: #eee;
+    font-style: italic;
+    text-align: center;
 }
 
 h2,
@@ -11,7 +15,8 @@ h3 {
     background: #eee;
     color: #444;
     font-style: italic;
-    font-family: Cambria, Georgia, serif;
+    font-family: Fira sans, sans;
+    text-align: center;
 }
 
 body {
@@ -48,3 +53,27 @@ input[type=submit]:hover {
     background-color: rgb(68, 144, 68);
     color: white;
 }
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .center {
+    margin: 0;
+    position: absolute;
+ }
+ 
