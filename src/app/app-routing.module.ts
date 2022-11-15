@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'plantregister', component: PlantregformComponent },
-  { path: 'weather', component: WeatheralertsComponent}
+  { path: 'weather', component: WeatheralertsComponent},
   { path: 'plantinfodetails/:id', component: InfoPlantDetailsComponent },
   { path: 'plantupdate/:id', component: PlantupdateformComponent },
   { path: 'plantinfo', component: PlantinfoComponent},
