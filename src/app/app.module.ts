@@ -24,14 +24,14 @@ import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-detai
     DashboardComponent,
     PlantinfoComponent,
     UserPlantDetailsComponent,
-    WeatheralertsComponent
+    WeatheralertsComponent,
+    InfoPlantDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    InfoPlantDetailsComponent
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
