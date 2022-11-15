@@ -10,9 +10,7 @@ import { UserPlant } from '../userPlant';
 export class DashboardComponent implements OnInit {
 [x: string]: any;
   userPlants: UserPlant[];
-
   userId = sessionStorage.getItem('ID:');
-
   loggedIn: boolean = false;
   currentUser: string = 'Please Log In';
   picVar: string = "/assets/plants2.jpg";

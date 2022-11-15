@@ -1,54 +1,37 @@
 <html>
   <body>
-    <div class="container">  
-      <h1> Plant Information </h1>  
-        
-      <input type="text" id="userInput" onkeyup="myFunction()" 
-      placeholder="Search for latin names..">
+    <div class="container">
+      <h1>Plant Information</h1>
 
-      <table id="myTable" class="table table-striped">  
-        <thead>  
-            <tr>  
-              <th>ID</th>  
-              <th>Latin</th>  
-              <th>Family</th>  
-              <th>Origin</th>
-            </tr>  
-        </thead>  
-        <tbody>  
-          <tr *ngFor="let plantdata of plantinfo" >  
-            <td>{{ plantdata.id }}</td>  
-            <td>{{ plantdata.latin }}</td>  
-            <td>{{ plantdata.family }}</td>  
-            <td>{{ plantdata.origin }}</td>  
-          </tr>  
-        </tbody>  
-      </table>  
+      <input
+        type="text"
+        id="userInput"
+        (input)="filterPlants()"
+        placeholder="Search for latin names.."
+      />
+
+      <table id="myTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Latin</th>
+            <th>Family</th>
+            <th>Origin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="plantCursor"
+            *ngFor="let plantdata of allPlants"
+            [routerLink]="['/plantinfodetails/' + plantdata.id]"
+          >
+            <td>{{ plantdata.id }}</td>
+            <td>{{ plantdata.latin }}</td>
+            <td>{{ plantdata.family }}</td>
+            <td>{{ plantdata.origin }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <script>
-      function myFunction() {
-          // Declare variables
-          var input, filter, table, tr, td, i, txtValue;
-          input = document.getElementById("userInput");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("th");
-        
-          // Loop through all table rows, and hide those who don't match the search query
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-              txtValue = td.textContent || td.innerText;
-              if (txtValue.indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-         }
-      }
-    </script> 
   </body>
-
 </html>

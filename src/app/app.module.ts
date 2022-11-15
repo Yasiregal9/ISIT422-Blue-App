@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 import { WeatheralertsComponent } from './weatheralerts/weatheralerts.component';
+import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-details.component';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +30,13 @@ import { WeatheralertsComponent } from './weatheralerts/weatheralerts.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InfoPlantDetailsComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-
   constructor (private http:HttpClient) {}
-
-
  }
+

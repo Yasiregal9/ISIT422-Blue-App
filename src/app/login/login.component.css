@@ -1,6 +1,6 @@
 h1 {
     color: rgb(55, 124, 55);
-    font-family: Cambria, Georgia, serif;
+    font-family: Fira sans, sans;
     font-size: 200%;
     padding: 5px 15px;
     background: #eee;
@@ -9,8 +9,7 @@ h1 {
 h2,
 h3 {
     font-style: italic;
-    font-family: Cambria, Georgia, serif;
-    font-weight: lighter;
+    font-family: Fira sans, sans;
 }
 
 body {
@@ -47,4 +46,10 @@ button {
 button:hover {
     background-color: rgb(68, 144, 68);
     color: white;
+}
+
+buttonDiv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,0 +1,58 @@
+<div *ngIf="plant">
+  <div>
+    {{ plant.id }}
+  </div>
+  <div>
+    {{ plant.latin }}
+  </div>
+  <div>
+    {{ plant.family }}
+  </div>
+  <div>
+    <span *ngFor="let item of plant.common">
+      {{ item }}
+    </span>
+  </div>
+  <div>
+    {{ plant.category }}
+  </div>
+  <div>
+    {{ plant.origin }}
+  </div>
+  <div>
+    {{ plant.climate }}
+  </div>
+  <div>
+    {{ plant.tempmax.celsius }}
+    {{ plant.tempmax.fahrenheit }}
+  </div>
+  <div>
+    {{ plant.tempmin.celsius }}
+    {{ plant.tempmin.fahrenheit }}
+  </div>
+  <div>
+    {{ plant.ideallight }}
+  </div>
+  <div>
+    {{ plant.toleratedlight }}
+  </div>
+  <div>
+    {{ plant.watering }}
+  </div>
+  <div>
+    <span *ngFor="let item of plant.insects">
+      {{ item }}
+    </span>
+  </div>
+  <div>
+    {{ plant.diseases }}
+  </div>
+  <div>
+    <span *ngFor="let item of plant.use">
+      {{ item }}
+    </span>
+  </div>
+  <div>
+    <button [routerLink]="['/plantinfo/']">Back</button>
+  </div>
+</div>

@@ -1,11 +1,10 @@
 <div *ngIf="userId">
 <h1>Update Plant 🪴</h1>
 <form #plantinfo = "ngForm" (ngSubmit) = "onClickSubmit(plantinfo.value)" >
-        <label for="plantID">plantID</label><br/>
-        <input type = "text" name = "plantID" placeholder = "Enter Plant ID" ngModel>
+    <p>PlantID: {{plantID}}</p>
     <pre></pre>
         <label for="date">Date</label><br/>
-        <input type = "text" name = "date" placeholder = "Enter Date" ngModel>
+        <input type = "text" name = "date" placeholder = "mm/dd/yy" ngModel>
     <pre></pre>
         <label for="currentheight">Current Height (inches)</label><br/>
         <input type = "text" name = "currentheight" placeholder = "Enter Current Height" ngModel>
