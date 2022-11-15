@@ -5,11 +5,13 @@ import { PlantupdateformComponent } from './plantupdateform/plantupdateform.comp
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
+import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-details.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'plantregister', component: PlantregformComponent },
+  { path: 'plantinfodetails/:id', component: InfoPlantDetailsComponent },
   { path: 'plantupdate/:id', component: PlantupdateformComponent },
   { path: 'plantinfo', component: PlantinfoComponent},
   { path: 'plantdetails/:id', component: UserPlantDetailsComponent },
@@ -18,6 +20,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
