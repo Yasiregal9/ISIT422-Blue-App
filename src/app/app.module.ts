@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
+import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-details.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,11 @@ import { UserPlantDetailsComponent } from './user-plant-details/user-plant-detai
     LoginComponent,
     DashboardComponent,
     PlantinfoComponent,
-    UserPlantDetailsComponent
+    UserPlantDetailsComponent,
+    InfoPlantDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
