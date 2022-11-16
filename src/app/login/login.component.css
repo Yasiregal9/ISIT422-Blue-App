@@ -48,8 +48,11 @@ button:hover {
     color: white;
 }
 
-buttonDiv {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.center {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 90%;
+    left: 52.5%;
+    margin: -50px 0 0 -50px;
 }
