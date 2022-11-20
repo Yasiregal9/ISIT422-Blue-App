@@ -17,6 +17,7 @@
             <th>Latin</th>
             <th>Family</th>
             <th>Origin</th>
+            <th>Common Names</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,7 @@
             <td>{{ plantdata.latin }}</td>
             <td>{{ plantdata.family }}</td>
             <td>{{ plantdata.origin }}</td>
+            <td><div *ngFor="let name of plantdata.common">{{name}}</div></td>
           </tr>
         </tbody>
       </table>
