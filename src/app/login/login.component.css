@@ -1,6 +1,6 @@
 h1 {
     color: rgb(55, 124, 55);
-    font-family: Fira sans, sans;
+    font-style: verdana;
     font-size: 200%;
     padding: 5px 15px;
     background: #eee;
@@ -9,7 +9,7 @@ h1 {
 h2,
 h3 {
     font-style: italic;
-    font-family: Fira sans, sans;
+    font-style: verdana;
 }
 
 body {

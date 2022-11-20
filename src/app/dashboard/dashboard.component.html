@@ -1,25 +1,52 @@
+<br>
 <div *ngIf="userId">
     <h3>{{currentUser}}</h3>
+    <br>
     <img src='{{picVar}}' class="center-block">
     <br><br>
     <h1>Your Plants</h1>
 
     <div class="userplants-list">
-        <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}}">
-            {{plant.plantUserName}}
-        </a>
+            <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}}">
+                {{plant.plantUserName}}
+            </a> 
 
+
+    <div class="card-group">
+        <div class="card">
+            <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}} class=" btn
+                btn-primary>{{plant.plantUserName}}</a>
+        </div>
+        <div class="card">
+            <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}} class=" btn
+                btn-primary>{{plant.plantUserName}}</a>
+        </div>
+        <div class="card">
+            <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}} class=" btn
+                btn-primary>{{plant.plantUserName}}</a>
+        </div>
     </div>
 </div>
 
-  
 <div *ngIf="loggedIn">
     <!-- <app-logout></app-logout> -->
-    </div>
+</div>
 
 <div *ngIf="!loggedIn">
     <!-- <signin></signin> -->
-    </div>
-  
-
-
+</div>
