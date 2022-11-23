@@ -13,15 +13,19 @@
 
     <h2>Update History</h2>
     <div class="updates-list">
-      <a *ngFor="let update of updateArray">
-          {{update.updateDate}}
-          <ul>
-            <li>Height: {{update.updateCurrentHeight}}"</li>
-            <li>Width: {{update.updateCurrentWidth}}"</li>
-            <li>Health: {{update.updateCurrentHealth}}/10</li>
-            <li *ngIf="update.updateComment">Comment: {{update.updateComment}}</li>
-          </ul>
-      </a>
+      <div class="card-group">
+        <div class="card" *ngFor="let update of updateArray">
+          <!-- IMAGE FOR PLANT-->
+          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+          <!-- PLANT INFO -->
+          <h5 class="card-title">{{update.updateDate}}</h5>
+          <h6>Height: {{update.updateCurrentHeight}}"</h6>
+          <h6>Width: {{update.updateCurrentWidth}}"</h6>
+          <h6>Health: {{update.updateCurrentHealth}}/10</h6>
+          <h6 *ngIf="update.updateComment">Comment: {{update.updateComment}}</h6>
+           
+        </div>
+      </div>
     </div>
   </div>
   <div class="chart-container" ng-show="userPlant">
