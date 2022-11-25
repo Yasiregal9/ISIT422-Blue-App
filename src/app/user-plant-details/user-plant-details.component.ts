@@ -17,6 +17,8 @@ export class UserPlantDetailsComponent implements OnInit {
   updateArray: UpdatePlant[]
   sizeChart: Chart
   healthChart: Chart
+  showCharts: boolean;
+  showHistory: boolean;
 
   constructor(
     private route: ActivatedRoute,

@@ -1,7 +1,7 @@
 <br>
 <h1>Plant Details</h1>
 <div *ngIf="userPlant">
-<br>
+  <br>
     <h2>{{userPlant.plantUserName}}</h2>
     <div>{{userPlant.plantCommonName}}</div>
     <div><i>{{userPlant.plantLatinName}}</i></div>
@@ -11,7 +11,9 @@
     <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
 
     <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
-<br>
+  <br>
+  Show Update History: <input type="checkbox" [(ngModel)]="showHistory">
+  <div class="history-container" [hidden]="!showHistory">
     <h2>Update History</h2>
     <div class="updates-list">
       <div class="card-group">
@@ -30,8 +32,14 @@
     </div>
   </div>
   <br>
-  <div class="chart-container" ng-show="userPlant">
-    <h2>Progress Charts</h2>
-    <canvas id="SizeChart">{{sizeChart}}</canvas>
-    <canvas id="HealthChart">{{healthChart}}</canvas>
-  </div>
+  Show Progress Charts: <input type="checkbox" [(ngModel)]="showCharts">
+</div>
+<div *ngIf="!userPlant">
+  <p>Sorry, there is no plant with that ID. </p>
+</div>
+<br>
+<div class="chart-container" [hidden]="!showCharts">
+  <h2>Progress Charts</h2>
+  <canvas id="SizeChart">{{sizeChart}}</canvas>
+  <canvas id="HealthChart">{{healthChart}}</canvas>
+</div>
