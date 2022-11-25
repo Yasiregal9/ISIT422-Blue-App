@@ -1,6 +1,7 @@
+<br>
 <h1>Plant Details</h1>
 <div *ngIf="userPlant">
-
+<br>
     <h2>{{userPlant.plantUserName}}</h2>
     <div>{{userPlant.plantCommonName}}</div>
     <div><i>{{userPlant.plantLatinName}}</i></div>
@@ -10,7 +11,7 @@
     <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
 
     <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
-
+<br>
     <h2>Update History</h2>
     <div class="updates-list">
       <div class="card-group">
@@ -28,6 +29,7 @@
       </div>
     </div>
   </div>
+  <br>
   <div class="chart-container" ng-show="userPlant">
     <h2>Progress Charts</h2>
     <canvas id="SizeChart">{{sizeChart}}</canvas>

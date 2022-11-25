@@ -89,3 +89,12 @@ button:disabled {
     width: 18rem; 
     padding: 2rem
 }
+
+.banner {
+    height: 25vh;
+    min-height: 500px;
+    background-image: url(/assets/bannerimage.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

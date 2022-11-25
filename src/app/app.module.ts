@@ -13,6 +13,7 @@ import { PlantinfoComponent } from './plantinfo/plantinfo.component';
 import { UserPlantDetailsComponent } from './user-plant-details/user-plant-details.component';
 import { WeatheralertsComponent } from './weatheralerts/weatheralerts.component';
 import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-details.component';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InfoPlantDetailsComponent } from './info-plant-details/info-plant-detai
     PlantinfoComponent,
     UserPlantDetailsComponent,
     WeatheralertsComponent,
-    InfoPlantDetailsComponent
+    InfoPlantDetailsComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
