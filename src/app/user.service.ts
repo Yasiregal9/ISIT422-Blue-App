@@ -8,13 +8,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
+  googleUserToken: string;
   constructor( private http: HttpClient) { }
 
   getUser(id: number): Observable<User> {
     return this.http.get<User>('http://localhost:3000/userdata/'+id);
   }
 
-  loginUser(newUser: NewUser): Observable<string> {  
+  loginUser(newUser: NewUser): Observable<string> {
     return this.http.post<string>('http://localhost:3000/loginUser', newUser);
   }
 
@@ -22,4 +23,13 @@ export class UserService {
     return this.http.post<User>('http://localhost:3000/newuser', newUser);
   }
 
+  setUserToken(token: string){
+    this.googleUserToken = token;
+    console.log(this.googleUserToken);
+  }
+
+  getUserToken(){
+    console.log(this.googleUserToken);
+    return this.googleUserToken;
+  }
 }

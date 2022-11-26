@@ -5,13 +5,13 @@ export class PlantInfo {
   common: String[];
   category: String;
   origin: String;
-  climate: Number;
+  climate: String;
   tempmax: { celsius: Number; fahrenheit: Number };
   tempmin: { celsius: Number; fahrenheit: Number };
-  ideallight: Number;
-  toleratedlight: Number;
+  ideallight: String;
+  toleratedlight: String;
   watering: String;
   insects: String[];
-  diseases: String;
+  diseases: String[];
   use: String[];
 }
