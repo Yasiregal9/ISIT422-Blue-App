@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { PlantInfoService } from '../plant-info.service';
 import {UserPlantService} from '../user-plant.service'
 import { UserPlant } from '../userPlant';
 
@@ -12,8 +13,9 @@ export class PlantregformComponent implements OnInit {
   plant: string[] = [];
   newPlant: UserPlant;
   userId = sessionStorage.getItem('ID:');
+  speciesName: String;
 
-  constructor(private userPlantService: UserPlantService) { }
+  constructor(private userPlantService: UserPlantService, private plantInfoService: PlantInfoService) { }
 
   onClickSubmit(data) {
     this.newPlant = new UserPlant();
@@ -33,7 +35,9 @@ export class PlantregformComponent implements OnInit {
  }
 
   ngOnInit(): void {
-    
+    this.speciesName = this.plantInfoService.getLatinName();
+    this.plantInfoService.setLatinName("");
+
   }
 
   showRandomName() {

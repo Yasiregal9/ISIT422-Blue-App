@@ -1,58 +1,90 @@
 <div *ngIf="plant">
-  <div>
-    {{ plant.id }}
-  </div>
-  <div>
-    {{ plant.latin }}
-  </div>
-  <div>
-    {{ plant.family }}
-  </div>
-  <div>
-    <span *ngFor="let item of plant.common">
-      {{ item }}
-    </span>
-  </div>
-  <div>
-    {{ plant.category }}
-  </div>
-  <div>
-    {{ plant.origin }}
-  </div>
-  <div>
-    {{ plant.climate }}
-  </div>
-  <div>
-    {{ plant.tempmax.celsius }}
-    {{ plant.tempmax.fahrenheit }}
-  </div>
-  <div>
-    {{ plant.tempmin.celsius }}
-    {{ plant.tempmin.fahrenheit }}
-  </div>
-  <div>
-    {{ plant.ideallight }}
-  </div>
-  <div>
-    {{ plant.toleratedlight }}
-  </div>
-  <div>
-    {{ plant.watering }}
-  </div>
-  <div>
-    <span *ngFor="let item of plant.insects">
-      {{ item }}
-    </span>
-  </div>
-  <div>
-    {{ plant.diseases }}
-  </div>
-  <div>
-    <span *ngFor="let item of plant.use">
-      {{ item }}
-    </span>
-  </div>
+  <table id="onePlantData" class="table align-middle table-bordered">
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>{{ plant.id }}</td>
+      </tr>
+      <tr>
+        <td>Latin Name</td>
+        <td>{{ plant.latin }}</td>
+      </tr>
+      <tr>
+        <td>Family</td>
+        <td>{{ plant.family }}</td>
+      </tr>
+      <tr>
+        <td>Common Names</td>
+        <td>
+          <div *ngFor="let item of plant.common">{{ item }}</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Category</td>
+        <td>{{ plant.category }}</td>
+      </tr>
+      <tr>
+        <td>Origin</td>
+        <td>{{ plant.origin }}</td>
+      </tr>
+      <tr>
+        <td>Climate</td>
+        <td>{{ plant.climate }}</td>
+      </tr>
+      <tr>
+        <td>Max Temperature</td>
+        <td>
+          <div>{{ plant.tempmax.celsius }} <span>&#176;</span>C</div>
+          <div>{{ plant.tempmax.fahrenheit }} <span>&#176;</span>F</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Min Temperature</td>
+        <td>
+          <div>{{ plant.tempmin.celsius }} <span>&#176;</span>C</div>
+          <div>{{ plant.tempmin.fahrenheit }} <span>&#176;</span>F</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Ideal Light</td>
+        <td>{{ plant.ideallight }}</td>
+      </tr>
+      <tr>
+        <td>Tolerated Light</td>
+        <td>{{ plant.toleratedlight }}</td>
+      </tr>
+      <tr>
+        <td>Watering</td>
+        <td>{{ plant.watering }}</td>
+      </tr>
+      <tr>
+        <td>Insects</td>
+        <td>
+          <div *ngFor="let item of plant.insects">
+            {{ item }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Diseases</td>
+        <td>
+          <div *ngFor="let item of plant.diseases">
+            {{ item }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Use</td>
+        <td>
+          <div *ngFor="let item of plant.use">
+            {{ item }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <div>
     <button [routerLink]="['/plantinfo/']">Back</button>
+    <button [routerLink]="['/plantregister']" (click)="registerPlant()">Register This Plant</button>
   </div>
 </div>
