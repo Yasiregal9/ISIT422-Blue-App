@@ -1,0 +1,4 @@
+.plantCursor:hover {
+  cursor: pointer;
+  background-color: lightgreen;
+}
