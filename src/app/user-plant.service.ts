@@ -12,9 +12,12 @@ export class UserPlantService {
 
   constructor(private http: HttpClient) { }
 
-  private userPlantsUrl: string = 'http://localhost:3000/userplant';
-  private oneUserPlantUrl: string = 'http://localhost:3000/oneuserplant';
-  private getUpdatesUrl: string = 'http://localhost:3000/getupdates';
+  //private userPlantsUrl: string = 'http://localhost:3000/userplant';
+  //private oneUserPlantUrl: string = 'http://localhost:3000/oneuserplant';
+  //private getUpdatesUrl: string = 'http://localhost:3000/getupdates';
+  private userPlantsUrl: string = 'https://phyteclubserver.azurewebsites.net/userplant';
+  private oneUserPlantUrl: string = 'https://phyteclubserver.azurewebsites.net/oneuserplant';
+  private getUpdatesUrl: string = 'https://phyteclubserver.azurewebsites.net/getupdates';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

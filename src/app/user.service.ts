@@ -11,15 +11,18 @@ export class UserService {
   constructor( private http: HttpClient) { }
 
   getUser(id: number): Observable<User> {
-    return this.http.get<User>('http://localhost:3000/userdata/'+id);
+    //return this.http.get<User>('http://localhost:3000/userdata/'+id);
+    return this.http.get<User>('https://phyteclubserver.azurewebsites.net/userdata/'+id);
   }
 
   loginUser(newUser: NewUser): Observable<string> {  
-    return this.http.post<string>('http://localhost:3000/loginUser', newUser);
+    //return this.http.post<string>('http://localhost:3000/loginUser', newUser);
+    return this.http.post<string>('https://phyteclubserver.azurewebsites.net/loginUser', newUser);
   }
 
   newUser(newUser: NewUser): Observable<User> {
-    return this.http.post<User>('http://localhost:3000/newuser', newUser);
+    //return this.http.post<User>('http://localhost:3000/newuser', newUser);
+    return this.http.post<User>('https://phyteclubserver.azurewebsites.net/newuser', newUser);
   }
 
 }

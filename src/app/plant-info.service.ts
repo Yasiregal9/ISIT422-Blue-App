@@ -11,7 +11,8 @@ export class PlantInfoService {
 
   constructor(private http: HttpClient) { }
 
-  private infoPlantUrl: string = 'http://localhost:3000/plantinfo';
+  //private infoPlantUrl: string = 'http://localhost:3000/plantinfo';
+  private infoPlantUrl: string = 'https://phyteclubserver.azurewebsites.net/plantinfo';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };

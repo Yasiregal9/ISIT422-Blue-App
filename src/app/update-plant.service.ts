@@ -11,7 +11,8 @@ export class UpdatePlantService {
 
   constructor(private http: HttpClient) { }
 
-  private updatePlantUrl: string = 'http://localhost:3000/updateplant';
+  //private updatePlantUrl: string = 'http://localhost:3000/updateplant';
+  private updatePlantUrl: string = 'https://phyteclubserver.azurewebsites.net/updateplant';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
