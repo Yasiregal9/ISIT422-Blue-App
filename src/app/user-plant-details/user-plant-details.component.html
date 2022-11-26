@@ -10,7 +10,7 @@
     <div><span>Width: </span>{{userPlant.plantCurrentWidth}}"</div>
     <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
 
-    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
+    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update Your Plant</a>
   <br>
   Show Update History: <input type="checkbox" [(ngModel)]="showHistory">
   <div class="history-container" [hidden]="!showHistory">
