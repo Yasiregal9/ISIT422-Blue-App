@@ -1,6 +1,7 @@
+<br>
 <h1>Plant Details</h1>
 <div *ngIf="userPlant">
-
+  <br>
     <h2>{{userPlant.plantUserName}}</h2>
     <div>{{userPlant.plantCommonName}}</div>
     <div><i>{{userPlant.plantLatinName}}</i></div>
@@ -9,19 +10,36 @@
     <div><span>Width: </span>{{userPlant.plantCurrentWidth}}"</div>
     <div><span>Health: </span>{{userPlant.plantCurrentHealth}}/10</div>
 
-    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update this plant</a>
-
+    <a routerLink="/plantupdate/{{userPlant.plantID}}">Update Your Plant</a>
+  <br>
+  Show Update History: <input type="checkbox" [(ngModel)]="showHistory">
+  <div class="history-container" [hidden]="!showHistory">
     <h2>Update History</h2>
     <div class="updates-list">
-      <a *ngFor="let update of updateArray">
-          {{update.updateDate}}
-          <ul>
-            <li>Height: {{update.updateCurrentHeight}}"</li>
-            <li>Width: {{update.updateCurrentWidth}}"</li>
-            <li>Health: {{update.updateCurrentHealth}}/10</li>
-            <li *ngIf="update.updateComment">Comment: {{update.updateComment}}</li>
-          </ul>
-      </a>
+      <div class="card-group">
+        <div class="card" *ngFor="let update of updateArray">
+          <!-- IMAGE FOR PLANT-->
+          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+          <!-- PLANT INFO -->
+          <h5 class="card-title">{{update.updateDate}}</h5>
+          <h6>Height: {{update.updateCurrentHeight}}"</h6>
+          <h6>Width: {{update.updateCurrentWidth}}"</h6>
+          <h6>Health: {{update.updateCurrentHealth}}/10</h6>
+          <h6 *ngIf="update.updateComment">Comment: {{update.updateComment}}</h6>
+           
+        </div>
+      </div>
     </div>
-    
   </div>
+  <br>
+  Show Progress Charts: <input type="checkbox" [(ngModel)]="showCharts">
+</div>
+<div *ngIf="!userPlant">
+  <p>Sorry, there is no plant with that ID. </p>
+</div>
+<br>
+<div class="chart-container" [hidden]="!showCharts">
+  <h2>Progress Charts</h2>
+  <canvas id="SizeChart">{{sizeChart}}</canvas>
+  <canvas id="HealthChart">{{healthChart}}</canvas>
+</div>

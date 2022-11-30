@@ -2,12 +2,11 @@
 
 h1 {
     color: rgb(55, 124, 55);
-    font-family: Fira sans, sans;
-    font-size: 225%;
+    font-size: 250%;
     padding: 5px 15px;
     background: #eee;
-    font-style: italic;
     text-align: center;
+    font-style: verdana;
 }
 
 h2,
@@ -15,7 +14,7 @@ h3 {
     background: #eee;
     color: #444;
     font-style: italic;
-    font-family: Fira sans, sans;
+    font-style: verdana;
     text-align: center;
 }
 
@@ -54,26 +53,48 @@ input[type=submit]:hover {
     color: white;
 }
 
-.navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-}
-
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
 
 .center-block {
     display: block;
     margin-left: auto;
     margin-right: auto;
- }
+}
 
- .center {
+.center {
     margin: 0;
     position: absolute;
- }
- 
+}
+
+button {
+
+    background: #eee;
+    border: 0 none;
+    cursor: pointer;
+    font-family: Cambria, Georgia, serif;
+    color: #333;
+}
+
+button:hover {
+    background-color: rgb(68, 144, 68);
+    color: white;
+}
+
+button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+.card {
+    width: 18rem; 
+    padding: 2rem
+}
+
+.banner {
+    height: 25vh;
+    min-height: 500px;
+    background-image: url(/assets/bannerimage.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

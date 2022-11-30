@@ -1,25 +1,39 @@
+<app-banner></app-banner>
+
 <div *ngIf="userId">
+    <br>
     <h3>{{currentUser}}</h3>
+    <br>
     <img src='{{picVar}}' class="center-block">
     <br><br>
     <h1>Your Plants</h1>
 
     <div class="userplants-list">
-        <a *ngFor="let plant of userPlants" routerLink="/plantdetails/{{plant.plantID}}">
-            {{plant.plantUserName}}
-        </a>
 
+
+        <div class="card-group">
+
+            <div class="card" *ngFor="let plant of userPlants">
+                <!-- IMAGE FOR PLANT-->
+                <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
+
+                <!-- PLANT INFO -->
+                <h5 class="card-title"><b>{{plant.plantCommonName}}</b></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><i>{{plant.plantLatinName}}</i></h6>
+                <p class="card-text">Update your plant and check on how it's doing!</p>
+
+                <!-- BUTTON WITH LINK -->
+                <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a>
+
+            </div>
+
+        </div>
     </div>
-</div>
 
-  
-<div *ngIf="loggedIn">
-    <!-- <app-logout></app-logout> -->
+    <div *ngIf="loggedIn">
+        <!-- <app-logout></app-logout> -->
     </div>
 
-<div *ngIf="!loggedIn">
-    <!-- <signin></signin> -->
+    <div *ngIf="!loggedIn">
+        <!-- <signin></signin> -->
     </div>
-  
-
-

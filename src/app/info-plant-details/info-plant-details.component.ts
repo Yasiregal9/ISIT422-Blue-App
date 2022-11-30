@@ -24,4 +24,10 @@ export class InfoPlantDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  registerPlant() {
+  this.service.setLatinName(this.plant.latin);
+  }
 }
+
+
