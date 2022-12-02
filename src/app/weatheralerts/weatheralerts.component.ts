@@ -19,7 +19,7 @@ weatherFunction() {
   let zipcode = zipInput.value;	
   this.weatherService.getWeather(zipcode).subscribe(data=>{this.weatherInfo = data;  console.log(this.weatherInfo);
   });
-
+  
   
 }	
 
