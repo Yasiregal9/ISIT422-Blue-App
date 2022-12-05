@@ -1,223 +1,23 @@
 
+<h2>Weather</h2>
+<label for="zip">Enter ZIP Code:</label><br/>
+<input type = "text" name = "zip" id="Userzip" placeholder = "ZIP code"> 
 
-   <label for="zip">Enter Zip:</label><br/>
-   <input type = "text" name = "zip" id="Userzip" placeholder = "Enter zip"> 
+<button (click)="weatherFunction()"id="weatherButton" type="button">Submit</button>
 
-   <button (click)="weatherFunction()"id="weatherButton" type="button">Submit Zip!</button>
+<h3 *ngIf="weatherInfo">Location: {{weatherInfo.location.city}}, {{weatherInfo.location.region}}</h3>
 
-  
-   <h3>Location: {{weatherInfo.properties.location}}</h3>
-
-
-<br>
-    
-    <!-- <p>Time of the Day: {{weatherInfo.properties.periods[0].name}}</p>
-    <p>Short Forecast: {{weatherInfo.properties.periods[0].shortForecast}}</p>
-    <p>Temperature: {{weatherInfo.properties.periods[0].temperature}}</p>
-    <p>Temperature Unit: {{weatherInfo.properties.periods[0].temperatureUnit}}</p>
-    <p>Detailed Forecast: {{weatherInfo.properties.periods[0].detailedForecast}}</p> -->
-
-
-<div class="userplants-list">
-
-    <div class="break">
-
-      <div class="card-group">
-
-          <div class="card">
-              <!-- IMAGE FOR PLANT-->
-              <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-              <!-- PLANT INFO -->
-              <h5 class="card-title"><b> {{weatherInfo.properties.periods[0].name}}</b></h5>
-              <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[0].shortForecast}}</i></h6>
-              <p class="card-text"> {{weatherInfo.properties.periods[0].detailedForecast}}</p>
-
-              <!-- BUTTON WITH LINK -->
-              <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-          </div>
-
-          <div class="card">
-            <!-- IMAGE FOR PLANT-->
-            <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-            <!-- PLANT INFO -->
-            <h5 class="card-title"><b> {{weatherInfo.properties.periods[1].name}}</b></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[1].shortForecast}}</i></h6>
-            <p class="card-text"> {{weatherInfo.properties.periods[1].detailedForecast}}</p>
-
-            <!-- BUTTON WITH LINK -->
-            <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-        </div>
-
-        <div class="card">
-          <!-- IMAGE FOR PLANT-->
-          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-          <!-- PLANT INFO -->
-          <h5 class="card-title"><b> {{weatherInfo.properties.periods[2].name}}</b></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[2].shortForecast}}</i></h6>
-          <p class="card-text"> {{weatherInfo.properties.periods[2].detailedForecast}}</p>
-
-          <!-- BUTTON WITH LINK -->
-          <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-        </div>
-
-       <div class="card">
-          <!-- IMAGE FOR PLANT-->
-          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-          <!-- PLANT INFO -->
-          <h5 class="card-title"><b> {{weatherInfo.properties.periods[3].name}}</b></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[3].shortForecast}}</i></h6>
-          <p class="card-text"> {{weatherInfo.properties.periods[3].detailedForecast}}</p>
-
-          <!-- BUTTON WITH LINK -->
-          <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-        </div>
-       <div class="card">
-            <!-- IMAGE FOR PLANT-->
-            <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-            <!-- PLANT INFO -->
-            <h5 class="card-title"><b> {{weatherInfo.properties.periods[4].name}}</b></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[4].shortForecast}}</i></h6>
-            <p class="card-text"> {{weatherInfo.properties.periods[4].detailedForecast}}</p>
-
-            <!-- BUTTON WITH LINK -->
-            <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-    
-        <div class="card">
-          <!-- IMAGE FOR PLANT-->
-          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-          <!-- PLANT INFO -->
-          <h5 class="card-title"><b> {{weatherInfo.properties.periods[5].name}}</b></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[5].shortForecast}}</i></h6>
-          <p class="card-text"> {{weatherInfo.properties.periods[5].detailedForecast}}</p>
-
-          <!-- BUTTON WITH LINK -->
-          <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-        </div>
-        <div class="card">
-          <!-- IMAGE FOR PLANT-->
-          <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-          <!-- PLANT INFO -->
-          <h5 class="card-title"><b> {{weatherInfo.properties.periods[6].name}}</b></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[6].shortForecast}}</i></h6>
-          <p class="card-text"> {{weatherInfo.properties.periods[6].detailedForecast}}</p>
-
-          <!-- BUTTON WITH LINK -->
-          <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-      <div class="card">
-        <!-- IMAGE FOR PLANT-->
-        <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-        <!-- PLANT INFO -->
-        <h5 class="card-title"><b> {{weatherInfo.properties.periods[7].name}}</b></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[7].shortForecast}}</i></h6>
-        <p class="card-text"> {{weatherInfo.properties.periods[7].detailedForecast}}</p>
-
-        <!-- BUTTON WITH LINK -->
-        <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-
-
-
-      <div class="card">
-      <!-- IMAGE FOR PLANT-->
-      <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-      <!-- PLANT INFO -->
-      <h5 class="card-title"><b> {{weatherInfo.properties.periods[8].name}}</b></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[8].shortForecast}}</i></h6>
-      <p class="card-text"> {{weatherInfo.properties.periods[8].detailedForecast}}</p>
-
-      <!-- BUTTON WITH LINK -->
-      <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-
-      <div class="card">
-      <!-- IMAGE FOR PLANT-->
-      <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-      <!-- PLANT INFO -->
-      <h5 class="card-title"><b> {{weatherInfo.properties.periods[9].name}}</b></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[9].shortForecast}}</i></h6>
-      <p class="card-text"> {{weatherInfo.properties.periods[9].detailedForecast}}</p>
-
-      <!-- BUTTON WITH LINK -->
-      <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-      <div class="card">
-      <!-- IMAGE FOR PLANT-->
-      <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-      <!-- PLANT INFO -->
-      <h5 class="card-title"><b> {{weatherInfo.properties.periods[10].name}}</b></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[10].shortForecast}}</i></h6>
-      <p class="card-text"> {{weatherInfo.properties.periods[10].detailedForecast}}</p>
-
-      <!-- BUTTON WITH LINK -->
-      <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-
-      <div class="card">
-        <!-- IMAGE FOR PLANT-->
-        <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-        <!-- PLANT INFO -->
-        <h5 class="card-title"><b> {{weatherInfo.properties.periods[11].name}}</b></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[11].shortForecast}}</i></h6>
-        <p class="card-text"> {{weatherInfo.properties.periods[11].detailedForecast}}</p>
-
-        <!-- BUTTON WITH LINK -->
-        <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>
-
-      <div class="card">
-        <!-- IMAGE FOR PLANT-->
-        <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-        <!-- PLANT INFO -->
-        <h5 class="card-title"><b> {{weatherInfo.properties.periods[12].name}}</b></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[12].shortForecast}}</i></h6>
-        <p class="card-text"> {{weatherInfo.properties.periods[12].detailedForecast}}</p>
-
-        <!-- BUTTON WITH LINK -->
-        <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
-      </div>  
-
-      <div class="card">
-      <!-- IMAGE FOR PLANT-->
-      <img src="/assets/plantexample.jpeg" class="card-img-top" alt="...">
-
-      <!-- PLANT INFO -->
-      <h5 class="card-title"><b> {{weatherInfo.properties.periods[13].name}}</b></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><i>{{weatherInfo.properties.periods[13].shortForecast}}</i></h6>
-      <p class="card-text"> {{weatherInfo.properties.periods[13].detailedForecast}}</p>
-
-      <!-- BUTTON WITH LINK -->
-      <!-- <a routerLink="/plantdetails/{{plant.plantID}}" btn btn-primary>{{plant.plantUserName}}</a> -->
-
+<div class="weatherforecast-list" *ngIf="weatherInfo">
+  <div class="break">
+    <div class="card-group">
+      <div class="card" *ngFor="let forecast of weatherInfo.forecasts">
+        <h5 class="card-title">{{forecast.day}}</h5>
+        <h6>{{forecast.text}}</h6>
+        <h6>Low: {{forecast.low}}</h6>
+        <h6>High: {{forecast.high}}</h6>
       </div>
     </div>
- </div>
+  </div>
 </div>
 
   

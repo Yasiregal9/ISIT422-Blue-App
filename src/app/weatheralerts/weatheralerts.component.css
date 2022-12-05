@@ -4,10 +4,10 @@ h2 {
     text-align: center;
   }
   
-  .userplants-list {
+  .weatherforecast-list {
     padding: 0;
     margin: auto;
-    max-width: 1000px;
+
   
     /* flexbox */
     display: flex;
@@ -16,6 +16,7 @@ h2 {
     justify-content: space-around;
     align-content: flex-start;
     align-items: flex-start;
+
   }
 
   .break {
@@ -52,4 +53,11 @@ h2 {
   
   a:hover {
     background-color: rgb(109, 196, 125);
+  }
+
+  .floating-card {
+    float: left;
+    margin: 5px;
+    max-width: 300px;
+
   }
