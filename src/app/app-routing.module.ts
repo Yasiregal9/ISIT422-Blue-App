@@ -17,11 +17,13 @@ const routes: Routes = [
   { path: 'plantupdate/:id', component: PlantupdateformComponent },
   { path: 'plantinfo', component: PlantinfoComponent},
   { path: 'plantdetails/:id', component: UserPlantDetailsComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'}  
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{onSameUrlNavigation: 'reload'})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
