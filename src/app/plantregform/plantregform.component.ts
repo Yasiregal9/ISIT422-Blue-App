@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PlantInfoService } from '../plant-info.service';
 import {UserPlantService} from '../user-plant.service'
 import { UserPlant } from '../userPlant';
@@ -15,7 +16,7 @@ export class PlantregformComponent implements OnInit {
   userId = sessionStorage.getItem('ID:');
   speciesName: String;
 
-  constructor(private userPlantService: UserPlantService, private plantInfoService: PlantInfoService) { }
+  constructor(private userPlantService: UserPlantService, private plantInfoService: PlantInfoService, private router: Router) { }
 
   onClickSubmit(data) {
     this.newPlant = new UserPlant();
@@ -32,6 +33,7 @@ export class PlantregformComponent implements OnInit {
     this.newPlant.plantUserID = this.userId;
 
     this.userPlantService.addNewUserPlant(this.newPlant).subscribe();
+    this.router.navigate(['/']);
  }
 
   ngOnInit(): void {
