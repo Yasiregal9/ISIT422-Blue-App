@@ -1,6 +1,7 @@
 // google  (code from   https://github.com/ShemiNechmad/GoogleSignInAngular )
 //import { Component, OnInit } from '@angular/core';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 declare var google: any;
 // end google
 // make sure you mention both http://localhost and http://localhost:4200
@@ -77,12 +78,14 @@ export class LoginComponent implements OnInit {
     sessionStorage.setItem('Picture:', "");
     this.display = false;
     console.log("in logout " + this.display);
-    window.location.href = '/dashboard';
+    //window.location.href = '/dashboard';
+    this.router.routeReuseStrategy.shouldReuseRoute = function() {return false;};
+    this.router.navigate(['/']);
   }
 
   //constructor(private userService: UserService) { }  // don't need a user server
   // unless you want to control who can login
-  constructor() { }
+  constructor(private router: Router) { }
 
      ngOnInit(): void {
         // this.existingUser = {
@@ -133,7 +136,9 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('Picture:', goggleobject.picture);
       
       this.display = true;
-      window.location.href = '/dashboard';
+      //window.location.href = '/dashboard';
+      this.router.routeReuseStrategy.shouldReuseRoute = function() {return false;};
+      this.router.navigate(['/']);
     }
 
 }

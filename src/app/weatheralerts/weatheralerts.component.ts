@@ -12,15 +12,11 @@ export class WeatheralertsComponent implements OnInit {
 	ngOnInit(): void {
 };
 
-
-  
 weatherFunction() {
 	let zipInput = document.getElementById("Userzip") as HTMLInputElement;
   let zipcode = zipInput.value;	
   this.weatherService.getWeather(zipcode).subscribe(data=>{this.weatherInfo = data;  console.log(this.weatherInfo);
   });
-
-  
 }	
 
 }
