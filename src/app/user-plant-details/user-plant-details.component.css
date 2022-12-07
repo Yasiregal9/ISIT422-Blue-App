@@ -7,7 +7,6 @@ h2 {
   .updates-list {
     padding: 0;
     margin: auto;
-    max-width: 1000px;
   
     /* flexbox */
     display: flex;
